@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+
 import { RenderTarget } from 'three';
 const scene = new THREE.Scene();
 const boxGeometry = new THREE.BoxGeometry(1,1,1);
@@ -8,7 +9,7 @@ const boxMaterial= new THREE.MeshBasicMaterial(
         wireframe:true
     }
 );
-const box = new THREE.Mesh(boxGeometry,boxMaterial);
+const box = new THREE.MeNPsh(boxGeometry,boxMaterial);
 
 
 //scene.add(box);
