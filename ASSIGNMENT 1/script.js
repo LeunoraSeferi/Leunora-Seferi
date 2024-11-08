@@ -31,7 +31,7 @@ directionalLight.position.set(10, 10, 10).normalize();
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
-const ambientLight = new THREE.AmbientLight(0xeeeeee); // Lighter ambient light
+const ambientLight = new THREE.AmbientLight(0xeeeeee); 
 scene.add(ambientLight);
 
 // Geometry
@@ -41,8 +41,8 @@ const roadGeometry = new THREE.PlaneGeometry(1, 10);
 const plain = new THREE.PlaneGeometry(10, 10);
 const animatedSphereGeometry = new THREE.SphereGeometry(0.2, 32, 32);
 
-// Unique materials for each object (colors as in your original code)
-const materialGrass = new THREE.MeshStandardMaterial({ color: 0x2cd159 }); // Lighter green for grass
+// Materials
+const materialGrass = new THREE.MeshStandardMaterial({ color: 0x2cd159 }); 
 const materialRoad = new THREE.MeshStandardMaterial({ color: 0x454745 });
 const materialBuilding301 = new THREE.MeshStandardMaterial({ color: 0xf5f3f2 });
 const materialBuilding302 = new THREE.MeshStandardMaterial({ color: 0xf5f3f2 });
@@ -58,7 +58,7 @@ const building302 = new THREE.Mesh(buildingS, materialBuilding302);
 const building801 = new THREE.Mesh(buildingL, materialBuilding801);
 const animatedSphere = new THREE.Mesh(animatedSphereGeometry, materialSphere);
 
-// Set rotations
+// rotations
 grass.rotation.x = -Math.PI / 2;
 road.rotation.x = -Math.PI / 2;
 road1.rotation.x = -Math.PI / 2;
@@ -99,7 +99,7 @@ addEdges(road1);
 gsap.timeline({ repeat: -1, yoyo: true }) // Infinite loop with back and forth motion
   .to(animatedSphere.position, { x: 2, z: 4, duration: 3, ease: 'power1.inOut' })   // Move forward on road
   .to(animatedSphere.position, { x: -1.5, z: 0, duration: 3, ease: 'power1.inOut' }) // Transition to road1
-  .to(animatedSphere.position, { x: -1.5, z: 0, duration: 3, ease: 'power1.inOut' }) // Move along road1
+  .to(animatedSphere.position, { x: -1.5, z: 0, duration: 0, ease: 'power1.inOut' }) // Move along road1
   .to(animatedSphere.position, { x: 2, z: -4, duration: 0, ease: 'power1.inOut' });   // Transition back to road
 
 
@@ -123,4 +123,4 @@ window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
-});
+}); 
