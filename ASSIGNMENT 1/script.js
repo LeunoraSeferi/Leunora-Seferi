@@ -70,7 +70,7 @@ building801.rotation.x = -Math.PI / 2;
 building301.position.set(3.2, 0.5, 1);
 building302.position.set(3.2, 0.5, -3);
 road.position.set(2, 0.01, 0);
-road1.position.set(-1.5, 0.01, 0);
+road1.position.set(-1.35, 0.01, 0);
 road1.rotateZ(0.74);
 building801.position.set(-1, 0.5, -1.9);
 building801.rotateZ(0.74);
