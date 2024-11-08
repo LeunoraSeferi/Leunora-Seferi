@@ -32,6 +32,48 @@ scene.add(directionalLight);
 const ambientLight = new THREE.AmbientLight(0xeeeeee);
 scene.add(ambientLight);
 
+// Function to create clearer, bolder numbered textures
+function createNumberTexture(text) {
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+  canvas.width = 256;
+  canvas.height = 256;
+
+  // Background color and text styling
+  context.fillStyle = '#f5f3f2'; // Light background
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Add shadow for better contrast
+  context.shadowColor = '#000000';
+  context.shadowBlur = 10;
+  context.shadowOffsetX = 2;
+  context.shadowOffsetY = 2;
+
+  // Text styling
+  context.fillStyle = '#000000'; // Black text
+  context.font = 'bold 120px Arial'; // Larger and bolder text
+  context.textAlign = 'center';
+  context.textBaseline = 'middle';
+  context.fillText(text, canvas.width / 2, canvas.height / 2);
+
+  // Create texture from canvas
+  return new THREE.CanvasTexture(canvas);
+}
+
+// Materials with numbered textures
+const materialBuilding301 = new THREE.MeshStandardMaterial({
+  map: createNumberTexture('301'),
+  color: 0xf5f3f2,
+});
+const materialBuilding302 = new THREE.MeshStandardMaterial({
+  map: createNumberTexture('302'),
+  color: 0xf5f3f2,
+});
+const materialBuilding801 = new THREE.MeshStandardMaterial({
+  map: createNumberTexture('801'),
+  color: 0x319aeb,
+});
+
 // Geometry
 const buildingS = new THREE.BoxGeometry(1, 2, 1);
 const buildingL = new THREE.BoxGeometry(1, 5, 1);
@@ -39,13 +81,10 @@ const roadGeometry = new THREE.PlaneGeometry(1, 10);
 const plain = new THREE.PlaneGeometry(10, 10);
 const animatedSphereGeometry = new THREE.SphereGeometry(0.2, 32, 32);
 
-// Materials
+// Other Materials
 const materialGrass = new THREE.MeshStandardMaterial({ color: 0x2cd159 });
 const materialRoad = new THREE.MeshStandardMaterial({ color: 0x454745 });
-const materialBuilding301 = new THREE.MeshStandardMaterial({ color: 0xf5f3f2 });
-const materialBuilding302 = new THREE.MeshStandardMaterial({ color: 0xf5f3f2 });
-const materialBuilding801 = new THREE.MeshStandardMaterial({ color: 0x319aeb });
-const materialSphere = new THREE.MeshStandardMaterial({ color: 0xff0000, metalness: 0.5, roughness: 0.5 });
+const materialSphere = new THREE.MeshStandardMaterial({ color: 0x0eb2f0, metalness: 0.5, roughness: 0.5 });
 
 // Meshes
 const grass = new THREE.Mesh(plain, materialGrass);
@@ -64,9 +103,9 @@ building301.rotation.x = -Math.PI / 2;
 building302.rotation.x = -Math.PI / 2;
 building801.rotation.x = -Math.PI / 2;
 
-// Positioning
-building301.position.set(3.2, 0.5, 1);
-building302.position.set(3.2, 0.5, -3);
+// Positioning (Corrected)
+building301.position.set(3.2, 0.5, -3); // Corrected position for 301
+building302.position.set(3.2, 0.5, 1);  // Corrected position for 302
 road.position.set(2, 0.01, 0);
 road1.position.set(-1.35, 0.01, 0);
 road1.rotateZ(0.74);
@@ -94,12 +133,11 @@ addEdges(road);
 addEdges(road1);
 
 // GSAP Animation - Continuous movement along both roads, with back-and-forth motion
-gsap.timeline({ repeat: -1, yoyo: true }) // Infinite loop with back and forth motion
-  .to(animatedSphere.position, { x: 2, z: 4, duration: 3, ease: 'power1.inOut' })   // Move forward on road
-  .to(animatedSphere.position, { x: -1.5, z: 0, duration: 3, ease: 'power1.inOut' }) // Transition to road1
-  .to(animatedSphere.position, { x: -1.5, z: 0, duration: 0, ease: 'power1.inOut' }) // Move along road1
-  .to(animatedSphere.position, { x: 2, z: -4, duration: 0, ease: 'power1.inOut' });   // Transition back to road
-
+gsap.timeline({ repeat: -1, yoyo: true })
+  .to(animatedSphere.position, { x: 2, z: 4, duration: 3, ease: 'power1.inOut' })
+  .to(animatedSphere.position, { x: -1.5, z: 0, duration: 3, ease: 'power1.inOut' })
+  .to(animatedSphere.position, { x: -1.5, z: 0, duration: 0, ease: 'power1.inOut' })
+  .to(animatedSphere.position, { x: 2, z: -4, duration: 0, ease: 'power1.inOut' });
 
 // Orbit Controls
 const controls = new OrbitControls(camera, renderer.domElement);
