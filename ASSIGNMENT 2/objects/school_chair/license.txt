@@ -1,0 +1,11 @@
+Model Information:
+* title:	Interior Asset (3D): Padded Chair
+* source:	https://sketchfab.com/3d-models/interior-asset-3d-padded-chair-3bec120b381b40019fa4a41bc1415f6a
+* author:	Nyabsino KMM (https://sketchfab.com/nyabsino)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Interior Asset (3D): Padded Chair" (https://sketchfab.com/3d-models/interior-asset-3d-padded-chair-3bec120b381b40019fa4a41bc1415f6a) by Nyabsino KMM (https://sketchfab.com/nyabsino) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
