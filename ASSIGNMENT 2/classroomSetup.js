@@ -79,7 +79,7 @@ export function loadModels(scene) {
   // Load desks and chairs in a 2x3 grid
   const numRows = 2;
   const numCols = 3;
-  const deskSpacingX = 3;
+  const deskSpacingX = 4;
   const deskSpacingZ = 4;
 
   loader.load("/objects/school_desk/school_desk.gltf", (gltf) => {
