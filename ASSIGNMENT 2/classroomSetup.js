@@ -50,7 +50,7 @@ export function createClassroom(scene) {
     new THREE.BoxGeometry(20, 3, 0.1),
     windowMaterial
   );
-  windowMesh.position.set(-8.2, 1.5, 0);
+  windowMesh.position.set(-8, 1.5, 0);
   windowMesh.rotation.y = Math.PI / 2;
   scene.add(windowMesh);
 
@@ -136,15 +136,21 @@ export function loadModels(scene) {
 
   // Load additional classroom objects
   const models = [
-    { file: "whiteboard/whiteboard.gltf", pos: [0, 1.9, 9.3], scale: 0.01, rotation: [0, -Math.PI, 0] }, // Whiteboard in correct orientation
+    { 
+      file: "whiteboard/whiteboard.gltf", 
+      pos: [0, 1.1, 9.92],  
+      scale: 2,  
+      rotation: [0, -Math.PI, 0] 
+  },
+  
     { file: "door/door.gltf", pos: [8, 1.2, 7.9], scale: 0.014 },
 
     // Teacher's desk and chair (same as student models)
     { file: "school_desk/school_desk.gltf", pos: [-3, -0, 7.5], scale: 1.4, rotation: [0, 0, 0] }, // Teacher's desk
     { file: "school_chair/school_chair.gltf", pos: [-3, -0, 7.9], scale: 6, rotation: [0, -Math.PI, 0] }, // Teacher's chair facing students
 
-    { file: "ceiling_light/ceiling_light.gltf", pos: [0, 2.8, 0], scale: 0.01 }, // Further reduced ceiling light size
-    { file: "book_shelf/book_shelf.gltf", pos: [-6, -0, -9.7], scale: 1.8 } // Bookshelf size adjusted
+    { file: "ceiling_light/ceiling_light.gltf", pos: [0, 2.8, 0], scale: 0.01 }, 
+    { file: "book_shelf/book_shelf.gltf", pos: [-6, -0, -9.7], scale: 1.8 } 
   ];
 
   models.forEach(({ file, pos, scale = 1, rotation = [0, 0, 0] }) => {

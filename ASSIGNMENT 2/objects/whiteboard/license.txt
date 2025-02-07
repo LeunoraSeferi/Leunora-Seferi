@@ -1,11 +1,11 @@
 Model Information:
-* title:	Whiteboard
-* source:	https://sketchfab.com/3d-models/whiteboard-eff6059c0f654aa3a5ba5e10eb59591e
-* author:	Reflex_Entertainment (https://sketchfab.com/Reflex_Entertainment)
+* title:	Whiteboard Low-poly
+* source:	https://sketchfab.com/3d-models/whiteboard-low-poly-f69949960b5049f0b7a733e47d9da489
+* author:	MaX3Dd (https://sketchfab.com/MaX3Dd)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Whiteboard" (https://sketchfab.com/3d-models/whiteboard-eff6059c0f654aa3a5ba5e10eb59591e) by Reflex_Entertainment (https://sketchfab.com/Reflex_Entertainment) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Whiteboard Low-poly" (https://sketchfab.com/3d-models/whiteboard-low-poly-f69949960b5049f0b7a733e47d9da489) by MaX3Dd (https://sketchfab.com/MaX3Dd) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
