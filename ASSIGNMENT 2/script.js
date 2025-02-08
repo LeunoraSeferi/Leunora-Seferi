@@ -1,6 +1,6 @@
 // script.js - Handles rendering, camera, and controls
-import * as THREE from "three";
-import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls.js";
+import * as THREE from "https://esm.sh/three";
+import { PointerLockControls } from "https://esm.sh/three/examples/jsm/controls/PointerLockControls.js";
 import { createClassroom, loadModels } from "./classroomSetup.js";
 
 let scene, camera, renderer, controls;

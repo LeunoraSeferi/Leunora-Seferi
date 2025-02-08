@@ -1,6 +1,6 @@
 // classroomSetup.js - Handles setting up the classroom structure and models
-import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import * as THREE from "https://esm.sh/three";
+import { GLTFLoader } from "https://esm.sh/three/examples/jsm/loaders/GLTFLoader.js";
 
 export function createClassroom(scene) {
   // Load textures
